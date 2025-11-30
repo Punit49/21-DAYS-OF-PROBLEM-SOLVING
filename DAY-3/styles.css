@@ -1,0 +1,11 @@
+*{
+    margin: 1rem;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+body{
+    color: white;
+    font-size: 2rem;
+}
