@@ -171,3 +171,199 @@ for(let i = 1; i <= rows; i++){
     str += "\n";
     q7.textContent += str;
 }
+
+// ? Q8. 
+let q8 = document.querySelector("#q8");
+
+for(let i = rows * 2 - 1; i >= 1; i-=2){
+    let str = "";
+    const currentRow = (i + 1) / 2;
+
+    for(let j = 1; j <= rows + currentRow - 1; j++){
+        if((j === rows + currentRow - 1) || (j === rows - currentRow + 1) || (i === rows * 2 - 1)){
+            str += "* ";
+        }
+        else {
+            str += "  ";
+        }
+    }
+
+    str += "\n";
+    q8.textContent += str;
+}
+
+// ? Q9. 
+let q9 = document.querySelector("#q9");
+
+// let str = "";
+// let counter = rows * 2 - 3;
+// for(let i = 1; i <= rows; i++){
+//     for(let j = 1; j <= i; j++){
+//         str+= "*";
+//     }
+//     for(let k = 1; k <= counter; k++){
+//         str+=" "
+//     }
+//     for(let l = 1; l <= i; l++){
+//         if(i == rows && l == rows) break;
+//         str+= "*";
+//     }
+
+//     str+="\n";
+//     counter -= 2;
+// }
+
+// counter = 1;
+// for(let i = rows; i > 1; i--){
+//     for(let j = 1; j < i; j++){
+//         str+= "*";
+//     }
+//     for(let k = 1; k <= counter; k++){
+//         str+=" "
+//     }
+//     for(let l = 1; l < i; l++){
+//         if(i == rows && l == rows) break;
+//         str+= "*";
+//     }
+
+//     str+="\n";
+//     counter += 2;
+// }
+// q9.textContent = str;
+
+// * Better Way - 
+let str = "";
+
+for (let i = 1; i <= rows; i++) {
+
+    for (let j = 1; j <= i; j++) {
+        if(i == rows && j == rows) break;
+        str += "*";
+    }
+
+    for (let j = 1; j < 2 * (rows - i); j++) {
+        str += " ";
+    }
+
+    for (let j = 1; j <= i; j++) {
+        str += "*";
+    }
+
+    str += "\n";
+}
+
+for (let i = rows - 1; i >= 1; i--) {
+
+    for (let j = 1; j <= i; j++) {
+        str += "*";
+    }
+
+    for (let j = 1; j < 2 * (rows - i); j++) {
+        str += " ";
+    }
+
+    for (let j = 1; j <= i; j++) {
+        str += "*";
+    }
+
+    str += "\n";
+}
+
+q9.textContent = str;
+
+// ? Q10.
+let q10 = document.querySelector("#q10");
+
+let str2 = "";
+for(let i = 1; i <= rows - 2; i++){
+    for(let j = 1; j <= rows + i - 1; j++){
+        if(j <= rows - i){
+            str2 += " ";
+        }
+        else {
+            str2 += "*";
+        }
+    }
+    str2 += "\n";
+}
+
+for(let i = rows - 3; i >= 1; i--){
+    for(let j = 1; j <= rows + i - 1; j++){
+        if(j <= rows - i){
+            str2 += " ";
+        }
+        else {
+            str2 += "*";
+        }
+    }
+    str2 += "\n";
+}
+
+q10.textContent = str2;
+
+// ? Q11. 
+let q11 = document.querySelector("#q11");
+let str3 = "";
+
+for(let i = 1; i <= rows; i++){
+    for(let j = 1; j <= rows * 2 - i; j++){
+        if(j < i) str3 += " ";
+        else str3 += "*";
+    }
+    str3 += "\n";
+}
+
+for(let i = rows - 1; i >= 1; i--){
+    for(let j = 1; j <= rows * 2 - i; j++){
+        if(j < i) str3 += " ";
+        else str3 += "*";
+    }
+    str3 += "\n";
+}
+
+q11.textContent = str3;
+
+// ? Q12. 
+let q12 = document.querySelector("#q12");
+let str4 = "";
+
+for(let i = 1; i <= rows - 2; i++){
+    for(let j = 1; j <= rows + i - 1; j++){
+        if(j === rows + i - 1 || j === rows - i + 1){
+            str4+="*";
+        } else {
+            str4+=" ";
+        }
+    }
+    str4+= "\n";
+}
+
+for(let i = rows - 3; i >= 1; i--){
+    for(let j = 1; j <= rows + i - 1; j++){
+        if(j === rows + i - 1 || j === rows - i + 1){
+            str4+="*";
+        } else {
+            str4+=" ";
+        }
+    }
+    str4+= "\n";
+}
+
+q12.textContent = str4;
+
+// ? Q13. 
+let q13 = document.querySelector("#q13");
+let str5 = "";
+
+for(let i = 1; i <= rows; i++){
+    for(let j = 1; j <= rows*2-i; j++){
+        if(j > rows - i) str5 += "*";
+        else str5 += " ";
+    }
+    str5 += "\n";
+}
+
+q13.textContent = str5;
+
+// ? Q14. 
+let q14 = document.querySelector("#q14");
