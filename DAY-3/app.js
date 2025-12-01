@@ -366,4 +366,23 @@ for(let i = 1; i <= rows; i++){
 q13.textContent = str5;
 
 // ? Q14. 
-let q14 = document.querySelector("#q14");
+let q14a = document.querySelector("#q14a");
+let q14b = document.querySelector("#q14b");
+let number = 9;
+let str6 = "";
+
+// * A
+for(let i = 1; i <= 10; i++){
+    str6 += `${number} X ${i} = ${number * i} \n`;
+}
+q14a.textContent = str6;
+
+// * B
+str6 = "";
+for(let i = 1; i <= number; i++){
+    for(let j = 1; j <= 10; j++){
+        str6 += `${i} X ${j} = ${i * j} \n`;
+    }
+    str6 += "\n"
+}
+q14b.textContent = str6;
