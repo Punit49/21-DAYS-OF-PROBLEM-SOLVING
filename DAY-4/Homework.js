@@ -49,4 +49,94 @@ function largestSmallest(n){
     return {largest, smallest};
 }
 
-console.log(largestSmallest(6485));
+// console.log(largestSmallest(6485));
+
+// ? Q4. Check if a Number is a Strong Number
+function getFactorial(n){
+    let factorial = 1;
+    if(x === 0 || x === 1) return 1;
+    for(let i = 2; i <=n; i++){
+        factorial *= i;
+    }
+    return factorial;
+}
+
+function isStrong(n){
+    let factorialSum = 0;
+    let originalNum = n;
+
+    while(n !== 0){
+        let lastDigit = Number(n % 10);
+        factorialSum += getFactorial(lastDigit);
+        n = Math.floor(n / 10);
+    }
+    return factorialSum === originalNum;
+}
+
+// console.log(isStrong(40585));
+
+// ? Q5. Check if a Number is an Automorphic Number.
+function isAutomorphic(n){
+    let originalNum = n;
+    let count = 0;
+
+    while(n !== 0){
+        count++;
+        n = Math.floor(n / 10);
+    }
+
+    let squareLastDigit = ((originalNum ** 2) % (10 ** count));
+    return squareLastDigit === originalNum;
+} 
+
+// console.log(isAutomorphic(376));
+
+// ? Q6. Find the Frequency of Each Digit. 
+function getFrequency(n){
+    let arrObj = [];
+
+    while(n !== 0){
+        let lastDigit = Number(n % 10);
+        let obj = arrObj.find((element) => element.digit === lastDigit);
+        if(obj){
+            obj.count++;
+        } else {
+            arrObj.push({digit: lastDigit, count: 1});
+        }
+        n = Math.floor(n / 10);
+    }
+    return arrObj;
+}
+
+// console.log(getFrequency(1122334455));
+
+// * Better Version with less time complexity
+function CountFrequency(n){
+    let frequency = Array(10).fill(0);
+
+    while(n !== 0){
+        let lastDigit = Number(n % 10);
+        frequency[lastDigit]++;
+        n = Math.floor(n / 10);
+    }
+
+    return frequency.map((count, digit) => ({digit, count}))
+            .filter((item) => (item.count > 0));
+}
+
+// console.log(CountFrequency(1223));
+
+// ? Q7. Check if a Number is a Harshad Number
+function isHarshad(n) {
+    let originalNum = n;
+    let sum = 0;
+
+    while(n !== 0){
+        let lastDigit = Number(n % 10);
+        sum += lastDigit;
+        n = Math.floor(n / 10);
+    }
+    return originalNum % sum === 0;
+}
+
+console.log(isHarshad(1728));
