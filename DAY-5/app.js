@@ -92,15 +92,6 @@ function GCD(n1, n2){
 // console.log(GCD(36, 48));
 
 // ? Q4. LCM - 
-let a = 12;
-let b = 19;
-
-function getLCM(n1, n2){
-    let HCF = GCD(n1, n2);
-    return (n1 * n2) / HCF;
-}
-console.log(getLCM(a, b));
-
 // * Bruteforce Method - 
 function findLCM(n1, n2){
     let lcm = n1 > n2 ? n1 : n2;
@@ -114,3 +105,14 @@ function findLCM(n1, n2){
 }
 
 console.log(findLCM(a, b));
+
+// * Optimized Method -  
+
+let a = 12;
+let b = 19;
+
+function getLCM(n1, n2){
+    let HCF = GCD(n1, n2);
+    return (n1 * n2) / HCF;
+}
+console.log(getLCM(a, b));
