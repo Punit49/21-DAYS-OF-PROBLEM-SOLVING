@@ -150,4 +150,4 @@ function fibonacciOrNot(n){
     return false;
 }
 
-console.log(fibonacciOrNot(21)); 
+// console.log(fibonacciOrNot(21)); 
