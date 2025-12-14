@@ -18,6 +18,8 @@ Each folder represents one day of the challenge and contains all problems solved
 | **DAY-3** | Solved Part-2 problems, including 7+ homework questions. |
 | **DAY-4** | Completed all homework problems and advanced to new concepts. |
 | **DAY-5** | Solved all lecture questions and improved speed + accuracy. |
+| **DAY-6** | Day-6 Of problem solving, solved all homework problems, now feeling more confident in prime numbers and fibonacci logics, on to next one ---> |
+| **DAY-7** | Day-7 of Problem solving, today's questions was around prime factorization and composite numbers, strenghtened the knowledge of numbers and completed all class questions. |
 | **…** | More days will be added until Day-21 is complete. |
 
 ---
