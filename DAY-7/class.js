@@ -83,7 +83,7 @@ function primeFactors(n){
     return primeFactors;
 }
 
-console.log(primeFactors(48));
+// console.log(primeFactors(121));
 
 // ? Q2. Factorization in Exponent Form - 
 function exponentPrimeFactorization(n){
@@ -106,7 +106,7 @@ function exponentPrimeFactorization(n){
     return exponent.slice(0, -2);
 }
 
-console.log(exponentPrimeFactorization(100));
+// console.log(exponentPrimeFactorization(100));
 
 // ? Q3. Distinct Prime Factor Count - 
 function distinctPrimeFactorCount(n){
@@ -146,4 +146,4 @@ function isPowerfulNumber(n){
     return {Powerful, count};
 }
 
-console.log(isPowerfulNumber(36));
+// console.log(isPowerfulNumber(36));
