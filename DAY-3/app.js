@@ -1,4 +1,4 @@
-let rows = 5;
+let rows = 25;
 let q1 = document.getElementById("q1");
 
 // ? Q1. 
@@ -278,7 +278,7 @@ let str2 = "";
 for(let i = 1; i <= rows - 2; i++){
     for(let j = 1; j <= rows + i - 1; j++){
         if(j <= rows - i){
-            str2 += " ";
+            str2 += "|";
         }
         else {
             str2 += "*";
@@ -290,7 +290,7 @@ for(let i = 1; i <= rows - 2; i++){
 for(let i = rows - 3; i >= 1; i--){
     for(let j = 1; j <= rows + i - 1; j++){
         if(j <= rows - i){
-            str2 += " ";
+            str2 += "|";
         }
         else {
             str2 += "*";
