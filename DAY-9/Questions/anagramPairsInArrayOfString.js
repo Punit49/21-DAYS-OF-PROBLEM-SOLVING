@@ -1,4 +1,6 @@
 // ? Q. Find All Anagram Pairs in an Array of Strings - 
+// * Bruteforce Method - We compare every word with every other word one by one. For each pair, we count characters and check if both words have the same letters. If two words are anagrams, we store them as valid results.
+
 function allAnagramPairs(stringArray){
     let anagrams = {};
 
@@ -30,7 +32,8 @@ function allAnagramPairs(stringArray){
 
 console.log(allAnagramPairs(["cat", "tac", "silent", "act", "listen", "tic"]));
 
-// * Using Optimized Method -
+// * Using Optimized Method without Built-ins -For each word, we create a character frequency pattern as a unique key, Words having the same pattern must be anagrams, so we group them together. In the end, we return only those groups which have more than one word.
+
 function allAnagramPairs2(strArray){
     let groups = {};
 
@@ -61,9 +64,9 @@ function allAnagramPairs2(strArray){
     return Object.values(groups).filter(group => group.length > 1);
 }
 
-console.log(allAnagramPairs2(["cat", "tac", "silent", "act", "listen", "tic"]));
+console.log(allAnagramPairs3(["cat", "tac", "silent", "act", "listen", "tic"]));
 
-// * Using Builtins - 
+// * Using Builtins - We sort characters of each word to get a common form. All anagrams become the same after sorting, so we use it as a key. Words with the same key are grouped and returned as anagram pairs.
 function allAnagramPairs3(strArray){
     let map = {};
     
