@@ -1,4 +1,4 @@
-// ? Q3. Check if One String is Rotation of Another - 
+// ? Q. Check if One String is Rotation of Another - 
 function isRotatedString(str, subStr){
     if(str.length !== subStr.length) return false;
     str = str + str;

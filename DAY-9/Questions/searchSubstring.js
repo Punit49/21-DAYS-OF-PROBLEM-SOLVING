@@ -1,4 +1,4 @@
-// ? Q2. Manual Substring Search (Without Using indexOf) - 
+// ? Q. Manual Substring Search (Without Using indexOf) - 
 function searchSubstring(str, subStr){
     for(let i = 0; i <= str.length - subStr.length; i++){
         let match = true;

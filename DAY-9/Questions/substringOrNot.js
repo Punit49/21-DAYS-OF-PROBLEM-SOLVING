@@ -1,4 +1,4 @@
-// ? Q1. Find if One String Is a Substring of Another (Manual Method) - \
+// ? Q. Find if One String Is a Substring of Another (Manual Method) - \
 function isSubstring(input, target){
     let count = 0;
     
