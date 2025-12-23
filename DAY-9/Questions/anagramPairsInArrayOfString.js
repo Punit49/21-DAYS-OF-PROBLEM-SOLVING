@@ -83,4 +83,4 @@ function allAnagramPairs3(strArray){
     return Object.values(map).filter(group => group.length > 1);
 }
 
-// console.log(allAnagramPairs3(["cat", "tac", "silent", "act", "listen", "tic"]));
+console.log(allAnagramPairs3(["cat", "tac", "silent", "act", "listen", "tic"]));
