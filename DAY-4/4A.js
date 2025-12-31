@@ -50,19 +50,18 @@ while(num > 0){
     num = Math.floor(num / 10);
 }
 
-// console.log("Splitted Numbers Are -", numArr);
+console.log("Splitted Numbers Are -", numArr);
 
 // ? Q2. Remove Decimal Mathematically - n % 1 gives fraction part
 let num2 = 12.345000000000001;
 function removeDecimal0(n) {
     while(n % 1 !== 0){
         n = Number((n * 10).toFixed(10));
-        console.log(n)
     }
     return Math.floor(n);
 }
 
-// console.log(removeDecimal0(num2)); 
+console.log(removeDecimal0(num2)); 
 
 // ? Q3. Separate Whole and Fractional Parts of a Number 
 let num3 = 789.95565;

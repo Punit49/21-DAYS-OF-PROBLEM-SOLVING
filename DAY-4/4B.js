@@ -4,7 +4,7 @@ let n = 1234891011;
 function getDigits(n) {
     let arr = [];
 
-    while(n !== 0){
+    while(n > 0){
         arr.unshift(n % 10);
         n = Math.floor(n / 10);
     }
@@ -19,7 +19,7 @@ let n2 = 12345;
 function reverseDigit(n){
     let digits = 0;
 
-    while(n !== 0){
+    while(n > 0){
         let last = n % 10;
         digits = digits * 10 + last;
         n = Math.floor(n / 10);
