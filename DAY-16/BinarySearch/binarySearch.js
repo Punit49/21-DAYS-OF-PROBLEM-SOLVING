@@ -18,9 +18,9 @@ function binarySearch(arr, target){
     return -1;
 }
 
-/*
+/*  Approach -
     Binary search works on the idea of eliminating half of the search space,
-    at every step, using the sorted order of the array. I begin by checking the middle element; 
+    at every step, using the sorted order of the array. I begin by checking the middle element, 
     if it is equal to the target, the search is complete. If the middle element is greater than the target, 
     I know that the target cannot exist in the right half, so I discard it and continue searching on the left side. 
     If the middle element is smaller than the target, I discard the left half and search on the right. 
