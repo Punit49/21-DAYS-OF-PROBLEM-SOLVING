@@ -150,17 +150,17 @@ for(let i = 1; i <= rows * 2 - 1; i+=2){
 let q7 = document.querySelector("#q7");
 let num = 1;
 
-// for(let i = 1; i <= rows; i++){
-//     let str = "";
-//     let num2 = num;
-//     for(let j = 1; j <= i; j++){
-//         str += `${num2} `;
-//         num2 = Number(!num2);
-//     }
-//     str += "\n";
-//     num = Number(!num);
-//     q7.textContent += str;
-// }
+for(let i = 1; i <= rows; i++){
+    let str = "";
+    let num2 = num;
+    for(let j = 1; j <= i; j++){
+        str += `${num2} `;
+        num2 = Number(!num2);
+    }
+    str += "\n";
+    num = Number(!num);
+    q7.textContent += str;
+}
 
 // * Better Way - 
 for(let i = 1; i <= rows; i++){

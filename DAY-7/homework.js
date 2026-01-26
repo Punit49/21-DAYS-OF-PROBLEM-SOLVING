@@ -12,8 +12,6 @@ function productOfDistinctPF(n){
     return product;
 }
 
-// console.log(productOfDistinctPF(150));
-
 // ? Q2. Check if a Number Is a Square-Free Number -
 function isSquareFreeNumber(n){
     let count = {};
@@ -30,8 +28,6 @@ function isSquareFreeNumber(n){
     return Math.max(...Object.values(count)) <= 1;
 }
 
-// console.log(isSquareFreeNumber(78));
-
 // * Optimized Code -
 function isSquareFree(n){
     for(let i = 2; i * i <= n; i++){
@@ -39,8 +35,6 @@ function isSquareFree(n){
     }
     return true;
 }
-
-// console.log(isSquareFree(78));              
 
 // ? Q3. Check if a Number Is a Smith Number - 
 function primeOrNot(n){

@@ -16,5 +16,6 @@ function findPositionToPlaceElement2(arr, element){
     while(i < arr.length && arr[i] < element){
         i++;
     }
+    
     return i;
 }

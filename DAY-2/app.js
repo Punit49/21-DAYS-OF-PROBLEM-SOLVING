@@ -3,9 +3,10 @@
 let nums = [199, 190, 99];
 let max;
 const maxDiv = document.querySelector("#max");
-    if(nums[0] > nums[1] && nums[0] > nums[2]) max = nums[0];
-    else if(nums[1] > nums[2]) max = nums[1];
-    else max = nums[2];
+
+if(nums[0] > nums[1] && nums[0] > nums[2]) max = nums[0];
+else if(nums[1] > nums[2]) max = nums[1];
+else max = nums[2];
 maxDiv.textContent = max;
 
 // * 2
@@ -62,7 +63,7 @@ const cleanSign = (n) => {
 posNegOrZero.textContent = cleanSign(78);
 
 // ? 3. 
-// let units = 250;
+// let units = 230;
 // const bill = document.querySelector("#bill");
 
 // const calBill = (units) => {
@@ -106,6 +107,7 @@ const calBill = (units) => {
         previousLimit = slab.limit;
         if(remaining <= 0) break;
     }   
+
     return total;
 }
 
@@ -128,30 +130,30 @@ let result = checkVowel(vowels, char);
 // vowelCheck.textContent = `${char} is a ${result}`;
 
 // * 2 - using reg expressions -
-// const checkMyVowel = (char = "0") => {
-//     char = String(char);
-//     if("aeiou".includes(char.toLowerCase()) && char !== "") {
-//         return "Vowel";
-//     }
-//     else if(/[a-z]/.test(char.toLowerCase())){
-//         return "Consonant";
-//     }
-//     return "Not a valid alphabet";
-// }
+const checkMyVowel = (char = "0") => {
+    char = String(char);
+    if("aeiou".includes(char.toLowerCase()) && char !== "") {
+        return "Vowel";
+    }
+    else if(/[a-z]/.test(char.toLowerCase())){
+        return "Consonant";
+    }
+    return "Not a valid alphabet";
+}
 
 // console.log(checkMyVowel(char));
 
 // * 3. Using ascii 
-// const checkMyVowel2 = (char = "0") => {
-//     char = String(char);
-//     if("aeiou".includes(char.toLowerCase()) && char !== "") {
-//         return "Vowel";
-//     }
-//     else if(char.charCodeAt() >= 97 && char.charCodeAt() <= 122){
-//         return "Consonant";
-//     }
-//     return "Not a valid alphabet";
-// }
+const checkMyVowel2 = (char = "0") => {
+    char = String(char);
+    if("aeiou".includes(char.toLowerCase()) && char !== "") {
+        return "Vowel";
+    }
+    else if(char.charCodeAt() >= 97 && char.charCodeAt() <= 122){
+        return "Consonant";
+    }
+    return "Not a valid alphabet";
+}
 
 // console.log(checkMyVowel2(char));
 
@@ -163,7 +165,6 @@ const checkLeapYear = (year) => {
         return;
     }
     console.log(`${year} is not leap year`);
-
 }
 
 // checkLeapYear(year);
@@ -173,21 +174,13 @@ let character = "+";
 
 const checkCase = (char) => {
     let charCode = char.charCodeAt();
-    if(charCode >= 48 && charCode <= 57) {
-        console.log(`${char} is a number`);
-        return;
-    }
-    if(charCode >= 97 && charCode <= 122){
-        console.log(`${char} is in lowercase`);
-        return;
-    } else if(charCode >= 65 && charCode <= 90){
-        console.log(`${char} is in UPPERCASE`);
-        return;
-    } 
-    console.log(`${char} is a special character`);
+    if(charCode >= 48 && charCode <= 57) return "Number";
+    if(charCode >= 97 && charCode <= 122) return "lowercase";
+    else if(charCode >= 65 && charCode <= 90) return "UPPERCASE";
+    return "special character";
 }
 
-// checkCase(character);
+// console.log(checkCase(character));
 
 // ? 2. 
 let sides = [3, 3, 5];
@@ -196,20 +189,10 @@ const triangleType = (sides) => {
     if(!Array.isArray(sides) || sides.length !== 3) return;
     let [s1, s2, s3] = [...sides].sort((x, y) => x - y);
 
-    if(s1 * s1 + s2 * s2 === s3 * s3){
-        console.log("Right Angled Triangle");
-        return;
-    } else if(s1 === s2 && s2 === s3){
-        console.log("Equilateral Triangle");
-        return;
-    } else if(s1 === s2 || s1 === s3 || s2 === s3){
-        console.log("Isosceles Triangle");
-        return;
-    }
-    else {
-        console.log("Scalene Triangle");
-    }
-
+    if(s1 * s1 + s2 * s2 === s3 * s3) return "Right Angled Triangle";
+    else if(s1 === s2 && s2 === s3) return "Equilateral Triangle";
+    else if(s1 === s2 || s1 === s3 || s2 === s3) return "Isosceles Triangle";
+    else return "Scalene Triangle";
 }
 
 // ? Optimized Code
@@ -223,15 +206,8 @@ const triangleType2 = (sides) => {
             s1 === s2 || s1 === s3 || s2 === s3 ? "Isosceles Triangle" : "Scalene Triangle";
 }
 
-// try {
-//     console.log(triangleType2([1, 3, 3]));
-// }
-// catch(err) {
-//     console.error(err.message);
-// }
-
 // ? 3. 
-let income = 700000;
+let income = 1000000;
 
 const calculatePercentage = (rate, income) => (rate / 100) * income;
 
@@ -284,6 +260,5 @@ const calIncomeTax = (income) => {
     
     return tax
 }
-
 
 // console.log(calIncomeTax(income));

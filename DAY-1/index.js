@@ -1,5 +1,3 @@
-// console.time()
-
 // ? Q1. 
     let num1 = 10;
     const printNDiv = document.querySelector(".printNResult");
@@ -27,6 +25,7 @@
 // * using loop - brute force
     let num4 = 10;
     const printNSum = document.querySelector(".printNSum");
+
     // if(num4 > 0){
     //     let sum = 0;
     //     for(let i = 1; i <= num4; i++){
@@ -49,8 +48,8 @@
     // printNSum.textContent = sum;
 
 // * Using Array and .keys() method -
-    let sum = [...Array(num4 + 1).keys()].slice(1).reduce((a, b) => a + b, 0);
-    printNSum.textContent = sum;
+    // let sum = [...Array(num4 + 1).keys()].slice(1).reduce((a, b) => a + b, 0);
+    // printNSum.textContent = sum;
 
 // * eval method - risky 
     // let sum = eval([...Array(num4 + 1).keys()].slice(1).join("+"));
@@ -68,10 +67,10 @@
     // }
 
     // * 2
-    for(let i = 1; i <= num5; i++){
-        fact = fact * i;
-    }
-    printFact.textContent = fact;
+    // for(let i = 1; i <= num5; i++){
+    //     fact = fact * i;
+    // }
+    // printFact.textContent = fact;
 
 // ? Q6. 
 
@@ -88,9 +87,9 @@
     // }
 
     // * 3
-    let n = num6 / 2;
-    let sum2 = n * (n + 1);
-    printSumEven.textContent = sum2;
+    // let n = num6 / 2;
+    // let sum2 = n * (n + 1);
+    // printSumEven.textContent = sum2;
     
 // ? Q7. 
 // console.time();
@@ -107,11 +106,10 @@
     // * 2.
     // let squared = Array.from({length: num7}, (_, i) => i + 1).map((num) => num ** 2);
     // printSquare.textContent = [...squared].join(" ");
-    
 
 // console.timeEnd();
 
-// ? Homework 
+// ? Homework -
 // ? Q1
     let num8 = 60;
     const nDivisble = document.querySelector(".nDivisible");
@@ -135,7 +133,7 @@
     }
 
 // ? Q4 
-    let num11 = 40;
+    let num11 = 20;
     for(let i = 2; i <= num11; i++){
         let square = Math.pow(i, 2)
         if((i % 2 == 0 ) && (square < num11)){
