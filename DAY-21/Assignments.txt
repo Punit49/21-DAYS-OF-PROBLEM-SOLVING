@@ -1,0 +1,9 @@
+Add search method on TreeNode class
+Add search method on BSTNode class
+Add delete method on BSTNode class
+Find Time Complexity of each method
+
+4. Time Complexity of Tree = O(n) 
+    n = number of nodes in Tree
+
+-> Time Complexity of Binary search Tree = O(log n) and O(n) in worst case.

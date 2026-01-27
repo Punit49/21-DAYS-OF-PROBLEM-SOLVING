@@ -1,5 +1,3 @@
-// ? Assignment 1 -
-
 class TreeNode {
     constructor(name){
         this.name = name;
@@ -10,6 +8,18 @@ class TreeNode {
         let node = new TreeNode(name);
         this.children.push(node);
         return node;
+    }
+
+    // Assignment - 1
+    search(value){
+        if(this.name === value) return this;
+
+        for (const child of this.children) {
+            let found = child.search(value)
+            if(found) return found
+        }
+
+        return null;
     }
 }
 
@@ -31,4 +41,5 @@ wallpapers.add("city.png");
 const rock = music.add("rock");
 rock.add("song1.mp3");
 
-console.log(media); 
+// Search Method -
+console.log(media.search("cake.png"));
